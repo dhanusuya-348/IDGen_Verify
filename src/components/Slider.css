@@ -1,0 +1,24 @@
+/* Container for the slider */
+.slider-container {
+  margin: 50px auto;
+  max-width: 1200px;
+}
+
+/* Container for the button below the slider */
+.slider-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Style for the button */
+.slider-button-container .btn {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+}
+
+/* Style for slider images to enforce uniform size */
+.slider-container img {
+  width: 100%; /* Ensure images take up the full width of the slider container */
+  height: 580px; /* Set a consistent height for all images */
+  object-fit: cover; /* Crop the image to fit while maintaining aspect ratio */
+}

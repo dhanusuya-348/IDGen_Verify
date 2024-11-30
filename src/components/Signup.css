@@ -1,0 +1,225 @@
+/* Color Variables for a Modern Look */
+:root {
+  --primary-color: #4f46e5;
+  --primary-hover: #4338ca;
+  --background-color: #f1f5f9;
+  --modal-background: #ffffff;
+  --text-primary: #1e293b;
+  --text-secondary: #6b7280;
+  --border-color: #d1d5db;
+  --error-color: #ef4444;
+  --success-color: #10b981;
+  --input-background: #f9fafb;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --button-shadow: rgba(79, 70, 229, 0.4);
+  --button-hover-shadow: rgba(67, 56, 202, 0.6);
+}
+
+/* Modal Overlay with Blur */
+.signup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(31, 41, 55, 0.8); /* Darker overlay */
+  backdrop-filter: blur(6px); /* Slightly more blur */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  z-index: 1000; /* Ensures overlay is above all content */
+}
+
+/* Modal Content Styling with Flexbox */
+.signup-modal {
+  display: flex; /* Using flexbox to position form and welcome content */
+  background: var(--modal-background);
+  padding: 0;
+  border-radius: 1.25rem;
+  width: 100%;
+  max-width: 800px; /* Increased width to accommodate two sections */
+  position: relative;
+  box-shadow: 0 25px 30px -5px var(--shadow-color),
+              0 10px 10px -5px var(--shadow-color);
+  animation: modal-slide-in 0.4s ease-out;
+  overflow: hidden; /* Ensures content stays within the box */
+}
+
+/* Form Section */
+.signup-form {
+  flex: 1; /* Form takes up 50% of the modal */
+  padding: 3rem 2.5rem;
+  background-color: var(--modal-background);
+}
+
+.signup-form h2 {
+  color: var(--text-primary);
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  letter-spacing: -0.025em;
+}
+
+/* Close Button */
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1.75rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.close-button:hover {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+}
+
+/* Welcome Section on the Right */
+.welcome-back {
+  flex: 1; /* Welcome section takes up 50% of the modal */
+  background-color: var(--primary-color); /* Contrasting background */
+  color: white;
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.welcome-back h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.welcome-back p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+/* Input Styling */
+/* Input Styling with Added Margin */
+input {
+  padding: 0.9rem 1.1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  background-color: var(--input-background);
+  color: var(--text-primary);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 1rem; /* Added margin for spacing between fields */
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
+input::placeholder {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+
+/* Button Styling */
+.signup-button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.9rem 1.1rem;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: background-color 0.3s ease, box-shadow 0.2s ease;
+  margin-top: 1.5rem;
+}
+
+.signup-button:hover {
+  background-color: var(--primary-hover);
+  box-shadow: 0 5px 15px var(--button-hover-shadow);
+  transform: translateY(-2px);
+}
+
+.signup-button:active {
+  background-color: var(--primary-hover);
+  transform: translateY(0);
+}
+
+/* Toggle Form Links */
+.signup-form a {
+  color: var(--primary-color);
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.signup-form a:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+.signup-form p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+/* Animations */
+@keyframes modal-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styling for Smaller Screens */
+@media (max-width: 800px) {
+  .signup-modal {
+    flex-direction: column; /* Stack the sections vertically on smaller screens */
+  }
+
+  .signup-form,
+  .welcome-back {
+    padding: 2rem 1.5rem;
+  }
+
+  .welcome-back {
+    padding: 1.5rem;
+  }
+
+  .signup-form h2 {
+    font-size: 1.5rem;
+  }
+
+  .signup-button {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .welcome-back h2 {
+    font-size: 1.5rem;
+  }
+
+  .welcome-back p {
+    font-size: 0.875rem;
+  }
+}

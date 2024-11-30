@@ -1,0 +1,47 @@
+/* Navbar custom styling */
+.navbar {
+  background-color: #333; /* Darker background for the navbar */
+  padding: 1rem 2rem;
+}
+
+/* Logo styling */
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+/* Navbar links styling */
+.navbar-nav .nav-link {
+  font-weight: bold; /* Make the links bold */
+  color: #000000; /* Default text color for links */
+  padding: 10px 15px; /* Add some padding for better clickability */
+  text-decoration: none; /* Remove underline from links */
+}
+
+/* Hover effect for navbar links */
+.navbar-nav .nav-link:hover {
+  color: #007bff; /* Change the link color on hover */
+}
+
+/* Active state for the current page link */
+.navbar-nav .nav-link.active {
+  color: #007bff; /* Highlight active link */
+}
+
+/* Specific styling for Sign Up link */
+.signup-link {
+  margin-left: 950px;
+  font-weight: bold; 
+  color: #000000; 
+  cursor: pointer;
+}
+
+/* Hover effect for Sign Up link */
+.signup-link:hover {
+  color: #007bff; 
+}
+
+/* Additional styling for user info links */
+.user-info {
+  margin-left: 450px; /* Push the user info to the right */
+}

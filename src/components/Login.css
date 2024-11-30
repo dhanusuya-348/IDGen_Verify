@@ -1,0 +1,199 @@
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f8f9fa;
+}
+
+.navbar-links {
+  display: flex;
+  list-style-type: none;
+}
+
+.navbar-links li {
+  margin-right: 1rem;
+}
+
+.navbar-account {
+  cursor: pointer;
+}
+
+/* Login styles */
+.login-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.login-modal {
+  display: flex;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 800px;
+  height: 400px;
+  position: relative;
+}
+
+.login-form {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+}
+
+.login-form input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-form p {
+  margin-bottom: 15px;
+}
+
+.login-button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.welcome-back {
+  flex: 1;
+  background-color: #333;
+  color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.welcome-back h2 {
+  margin-bottom: 20px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Ensure slider doesn't overlap */
+.slider-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Login styles */
+.login-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dimmed background for modal effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure overlay is above all other content */
+}
+
+.login-modal {
+  display: flex;
+  background-color: white; /* Ensure background is white */
+  border-radius: 8px;
+  overflow: hidden;
+  width: 800px;
+  height: 400px;
+  position: relative;
+  pointer-events: auto; /* Ensure pointer events are enabled */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+}
+
+.login-form {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+}
+
+.login-form input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem; /* Make the font size larger for better readability */
+  color: #333; /* Change text color to a darker shade for better visibility */
+  background-color: white; /* Ensure the background is white */
+}
+
+/* Optional: Add focus styles */
+.login-form input:focus {
+  border-color: #007bff; /* Change border color on focus */
+  outline: none; /* Remove the default outline */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle shadow on focus */
+}
+
+.login-form p {
+  margin-bottom: 15px;
+}
+
+.login-button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.welcome-back {
+  flex: 1;
+  background-color: #333;
+  color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.welcome-back h2 {
+  margin-bottom: 20px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
